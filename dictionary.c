@@ -10,6 +10,10 @@
 
 #include "dictionary.h"
 
+#define N 531468
+
+unsigned int create_key(const char *word, int length);
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -17,9 +21,6 @@ typedef struct node
     struct node *next;
 }
 node;
-
-// Choose number of buckets in hash table
-const unsigned int N = 531468; // Bucket for the first three characters
 
 // Hash table
 node *table[N];
